@@ -11,9 +11,8 @@ public class Calculator {
         return uniqueCalculator;
     }
 
+
+
     //Punch of methods for this calculator
-
-
-
 
 }
