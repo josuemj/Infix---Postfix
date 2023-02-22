@@ -10,9 +10,11 @@ class CalculatorTest {
 
     @org.junit.jupiter.api.Test
     void isOperand() {
+
     }
 
     @org.junit.jupiter.api.Test
     void operatePostFix() {
+        assertEquals(32,"5+(2*9)+9");
     }
 }
