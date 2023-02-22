@@ -1,3 +1,5 @@
+package Model;
+
 import Model.*;
 
 public class StackFactory<T> {

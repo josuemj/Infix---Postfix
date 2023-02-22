@@ -1,10 +1,10 @@
-import Controller.Filer;
-import Model.StackUsingArrayList;
-import Model.StackUsingDoubleLinkedList;
-import Model.StackUsingLinkedList;
-import Model.StackVector;
+import Model.*;
 
 import java.util.Scanner;
+
+/**
+ * Main class
+ */
 public class Main {
     public static void main(String[] args) {
 
@@ -31,22 +31,22 @@ public class Main {
                     switch (stackType){
                         case "1":
                             System.out.println("Implementing Single Linked List");
-                            myCalculator.operatePostFix(new StackUsingLinkedList());
+                            System.out.println(myCalculator.operatePostFix(new StackUsingLinkedList()));
                             break;
 
                         case "2":
                             System.out.println("Implementing Double Linked List");
-                            myCalculator.operatePostFix(new StackUsingDoubleLinkedList());
+                            System.out.println(myCalculator.operatePostFix(new StackUsingDoubleLinkedList()));
                             break;
 
                         case "3":
                             System.out.println("Implementing ArrayList");
-                            myCalculator.operatePostFix(new StackUsingArrayList());
+                            System.out.println(myCalculator.operatePostFix(new StackUsingArrayList()));
                             break;
 
                         case "4":
-                            System.out.println("Vector");
-                            myCalculator.operatePostFix(new StackVector());
+                            System.out.println("Implementing Vector");
+                            System.out.println(myCalculator.operatePostFix(new StackVector()));
                             break;
 
                         default:

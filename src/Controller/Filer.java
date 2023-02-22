@@ -4,6 +4,11 @@ import java.io.FileReader;
 
 public class Filer{
 
+    /**
+     * Reads the file that contains the infix expression and return in string
+     * @return
+     * @throws Exception
+     */
     public static String readFile() throws Exception {
 
         String filename = "src\\Controller\\Infix.txt";
@@ -26,6 +31,11 @@ public class Filer{
         }
         return null;
     }
+
+    /**
+     * returns the infix expression.
+     * @return
+     */
 
     public static String getInfixExpression(){
         try{
