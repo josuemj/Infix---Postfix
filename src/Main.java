@@ -1,9 +1,16 @@
+import Controller.Filer;
+import Model.StackUsingArrayList;
+import Model.StackUsingDoubleLinkedList;
+import Model.StackUsingLinkedList;
+import Model.StackVector;
+
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
-        Calculator myCalculator = Calculator.getCalculator(); //Calculator object created
+        Calculator myCalculator = Calculator.getCalculator();
+
 
         while (true) {
 
@@ -24,18 +31,22 @@ public class Main {
                     switch (stackType){
                         case "1":
                             System.out.println("Implementing Single Linked List");
+                            myCalculator.operatePostFix(new StackUsingLinkedList());
                             break;
 
                         case "2":
                             System.out.println("Implementing Double Linked List");
+                            myCalculator.operatePostFix(new StackUsingDoubleLinkedList());
                             break;
 
                         case "3":
                             System.out.println("Implementing ArrayList");
+                            myCalculator.operatePostFix(new StackUsingArrayList());
                             break;
 
                         case "4":
                             System.out.println("Vector");
+                            myCalculator.operatePostFix(new StackVector());
                             break;
 
                         default:
@@ -43,6 +54,8 @@ public class Main {
                             break;
                     }
                     break;
+
+
 
                 case "2":
                     System.out.println("Thank u!");
