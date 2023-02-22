@@ -12,6 +12,7 @@ public class Main {
         Calculator myCalculator = Calculator.getCalculator();
 
 
+
         while (true) {
 
             System.out.println("\nIntroduce the option\n====================");
@@ -19,8 +20,11 @@ public class Main {
             System.out.println("2. Exit\n====================");
 
             String run = in.nextLine();
+            StackFactory<String> myStack = new StackFactory<>();
 
             switch (run){
+
+
 
                 case "1":
                     System.out.println("Select the stack implementation");
@@ -31,22 +35,22 @@ public class Main {
                     switch (stackType){
                         case "1":
                             System.out.println("Implementing Single Linked List");
-                            System.out.println(myCalculator.operatePostFix(new StackUsingLinkedList()));
+                            System.out.println(myCalculator.operatePostFix(myStack.IgetIStack("SingleLinkedList"))); //factory
                             break;
 
                         case "2":
                             System.out.println("Implementing Double Linked List");
-                            System.out.println(myCalculator.operatePostFix(new StackUsingDoubleLinkedList()));
+                            System.out.println(myCalculator.operatePostFix(myStack.IgetIStack("DoubleLinkedList")));
                             break;
 
                         case "3":
                             System.out.println("Implementing ArrayList");
-                            System.out.println(myCalculator.operatePostFix(new StackUsingArrayList()));
+                            System.out.println(myCalculator.operatePostFix(myStack.IgetIStack("ArrayList")));
                             break;
 
                         case "4":
                             System.out.println("Implementing Vector");
-                            System.out.println(myCalculator.operatePostFix(new StackVector()));
+                            System.out.println(myCalculator.operatePostFix(myStack.IgetIStack("Vector")));
                             break;
 
                         default:

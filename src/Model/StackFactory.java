@@ -5,9 +5,6 @@ import Model.*;
 public class StackFactory<T> {
 
     public IStack<T> IgetIStack(String stackType) {
-        if (stackType == null) {
-            return null;
-        }
 
         if (stackType.equals("ArrayList")) {
             return new StackUsingArrayList<>();
